@@ -11,6 +11,6 @@ y_values = data[:, 1].astype(float)
 # Plot
 plt.plot(x_values, y_values)
 plt.xlabel(r'$\omega$')
-plt.ylabel(r'$H(e^{j\omega})$')
+plt.ylabel(r'$|H(e^{j\omega})|$')
 plt.grid(True)
 plt.savefig('../figs/fig1.png')

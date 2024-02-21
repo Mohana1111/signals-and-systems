@@ -129,15 +129,13 @@ A finite impulse response (FIR) filter has only two non-zero samples in its impu
 \end{table}
 From \tabref{tab:gate23bm17.1},
 \begin{align}
-	H(e^{j\omega}) &= h[0] + h[1]e^{-j\omega} + h[2]e^{-2j\omega} +...+h[M]e^{-Mj\omega} \\
-	&= 1 + e^{-j\omega} \\
-	\abs{H(e^{j\omega})} &= \sqrt{(1+\cos{(j\omega)})^{2} + (\sin{(-j\omega)})^{2}} \\
-	&= \sqrt{1+(\cos{(j\omega)})^{2}+2\cos{(j\omega)}+(\sin{(j\omega)})^{2}} \\
-	&= \sqrt{2(1+\cos{(j\omega)})} \\
-	&= 2\abs{\cos{(\frac{j\omega}{2})}}
+	H(e^{j\omega}) &= 1 + e^{-j\omega} \\
+	&= e^{\frac{-j\omega}{2}}(e^{\frac{j\omega}{2}} + e^{\frac{-j\omega}{2}}) \\
+	&= e^{\frac{-j\omega}{2}}(2cos{\brak{\frac{\omega}{2}}}) \\
+	\abs{H(e^{j\omega})} &= 2\abs{\cos{\brak{\frac{\omega}{2}}}}
 \end{align}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\textwidth]{./figs/fig1.png}
 \end{figure}
