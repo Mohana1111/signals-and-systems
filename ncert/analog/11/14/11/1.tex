@@ -134,13 +134,19 @@ Equation of x-projection of radius:
 \begin{align}
 x(t) &= r\sin(\frac{2\pi}{T}t + \phi) \\
 	&= 3\sin(\frac{2\pi}{2}t + \pi) \\
-	&= -3sin(\pi{t}) cm.
+	&= -3sin(\pi{t})\text{cm} \\
+	\mathcal{L}{\brak{x(t)}} &= \int_{0}^{\infty} -3sin(\pi{t})e^{-st}\ \\
+	&= \frac{-3}{2i} \int_{0}^{\infty} e^{-(s-i\pi)t} - e^{-(s+i\pi)t}\ \\
+	X(s) &= \frac{-3\pi}{s^{2}+\pi^{2}} 
 \end{align}
 \item Similarly,
 \begin{align}
 x(t) &= r\sin(\frac{2\pi}{T}t + \phi) \\
 	&= 2\sin(\frac{2\pi}{4}t + \frac{\pi}{2}) \\
-	&= 2\cos(\frac{\pi}{2}t) cm.
+	&= 2\cos(\frac{\pi}{2}t)\text{cm} \\
+	\mathcal{L}{\brak{x(t)}} &= \int_{0}^{\infty} 2\cos(\frac{\pi}{2}t)e^{-st}\ \\
+	&= \frac{1}{i} \int_{0}^{\infty} e^{-(s-i(\frac{\pi}{2}))t} - e^{-(s+i(\frac{\pi}{2}))t}\ \\
+	X(s) &= \frac{8s}{4s^{2}+\pi^{2}}
 	\end{align}
 	\end{enumerate}
 \end{document}
