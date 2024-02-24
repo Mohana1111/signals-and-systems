@@ -130,23 +130,19 @@ Q: Figures correspond to two circular motions. The radius of the circle, the per
 \end{table}
 \begin{enumerate}[label=\alph*.]
 \item From \tabref{tab:11.14.11},
-Equation of x-projection of radius:
+Equation of x-projection of radius: \\
+At $t=0$, the radius vector makes an angle $\frac{\pi}{2}$ with the positive x-axis, $\phi = \frac{\pi}{2}$,
 \begin{align}
-x(t) &= r\sin(\frac{2\pi}{T}t + \phi) \\
-	&= 3\sin(\frac{2\pi}{2}t + \pi) \\
-	&= -3sin(\pi{t})\text{cm} \\
-	\mathcal{L}{\brak{x(t)}} &= \int_{0}^{\infty} -3sin(\pi{t})e^{-st}\, ds \\
-	&= \frac{-3}{2j} \int_{0}^{\infty} e^{-(s-j\pi)t} - e^{-(s+j\pi)t}\, ds \\
-	X(s) &= \frac{-3\pi}{s^{2}+\pi^{2}} 
+x(t) &= r\cos\brak{\frac{2\pi}{T}t + \phi} \\
+	&= 3\cos\brak{\frac{2\pi}{2}t + \frac{\pi}{2}} \\
+	&= -3sin\brak{\pi{t}}\text{cm}
 \end{align}
-\item Similarly,
+\item Similarly, \\
+At $t=0$, radius vector makes an angle $\pi$ with x-axis in anti-clockwise direction, $\phi = \pi$,
 \begin{align}
-x(t) &= r\sin(\frac{2\pi}{T}t + \phi) \\
-	&= 2\sin(\frac{2\pi}{4}t + \frac{\pi}{2}) \\
-	&= 2\cos(\frac{\pi}{2}t)\text{cm} \\
-	\mathcal{L}{\brak{x(t)}} &= \int_{0}^{\infty} 2\cos(\frac{\pi}{2}t)e^{-st}\, ds \\
-	&= \frac{1}{j} \int_{0}^{\infty} e^{-(s-j(\frac{\pi}{2}))t} - e^{-(s+j(\frac{\pi}{2}))t}\, ds \\
-	X(s) &= \frac{8s}{4s^{2}+\pi^{2}}
-	\end{align}
+x(t) &= r\cos\brak{\frac{2\pi}{T}t + \phi} \\
+	&= 2\cos\brak{\frac{2\pi}{4}t + \pi} \\
+	&= -2\cos\brak{\frac{\pi}{2}t}\text{m}
+\end{align}
 	\end{enumerate}
 \end{document}
