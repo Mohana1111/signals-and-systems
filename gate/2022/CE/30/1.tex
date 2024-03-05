@@ -126,32 +126,21 @@ Q: The Fourier cosine series of a function is given by: $f(x) = \sum_{n=0}^{\inf
 \input{./tables/tab1.tex}
 \end{table}
 \begin{align}
-f(x) = &\frac{1}{2}a_0 + a_1 \cos(x) + a_2 \cos(2x) + a_3 \cos(3x) + \ldots \\
-&+ b_1 \sin(x) + b_2 \sin(2x) + b_3 \sin(3x) + \ldots \\
-\int_{-\pi}^{\pi} f(x)\cos(nx) \, dx &= \frac{1}{2}a_0 \int_{-\pi}^{\pi} \cos(nx)\,dx + a_1\int_{-\pi}^{\pi} \cos(x)\cos(nx)\,dx + a_2\int_{-\pi}^{\pi} \cos(2x)\cos(nx)\,dx + \ldots \\
-&+  b_1\int_{-\pi}^{\pi} \sin(x)\cos(nx)\,dx + b_2\int_{-\pi}^{\pi} \sin(2x)\cos(nx)\,dx + \ldots \\
-\int_{-\pi}^{\pi} \sin(mx)\cos(nx) \,dx &= 0 \\
-\int_{-\pi}^{\pi} \sin(mx)\sin(nx) \,dx &= 
-\begin{cases}
-    \pi \quad \text{if} \quad m=n \neq 0 \\
-    0 \quad \text{otherwise} \\
-\end{cases} \\
-\int_{-\pi}^{\pi} \cos(mx)\cos(nx) \,dx &=
-\begin{cases}
-    2\pi \quad \text{if} \quad m=n=0 \\
-    \pi \quad \text{if} \quad m=n\neq0 \\
-    0 \quad \text{if} \quad m \neq n \\
-\end{cases} \\
-    \therefore f_n &= \frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos{nx} \,dx \\
-f_4 &= \frac{2}{\pi} \int_{0}^{\pi} (\cos x)^4 \cos(4x) \, dx \\
-&= \frac{2}{\pi} \left( \frac{3}{8} \int_{0}^{\pi} \cos(4x) \, dx + \frac{1}{2} \int_{0}^{\pi} \cos(2x) \cos(4x) \, dx + \frac{1}{8} \int_{0}^{\pi} \cos(4x)^2 \, dx \right) \\
-&= \frac{2}{\pi} \left( \frac{3}{8} \frac{1}{4} \sin(4x) \Bigg|_{0}^{\pi} + \frac{1}{2} \left[\frac{1}{6} \sin(6x) + \frac{1}{2}\sin(2x) \right] \Bigg|_{0}^{\pi} + \frac{1}{8} \frac{1}{2} \left[ x + \frac{1}{8} \sin(8x) \right] \Bigg|_{0}^{\pi}  \right) \\
-&=\frac{1}{8} \\
-f_5 &= \frac{2}{\pi} \int_{0}^{\pi} (\cos x)^4 \cos(5x) \, dx \\
-&= \frac{2}{\pi} \left( \frac{3}{8} \int_{0}^{\pi} \cos(5x) \, dx + \frac{1}{2} \int_{0}^{\pi} \cos(2x) \cos(5x) \, dx + \frac{1}{8} \int_{0}^{\pi} \cos(4x) \cos(5x) \, dx \right) \\
-&= \frac{2}{\pi} \left(\frac{3}{8} \frac{1}{5} \sin(5x) \Bigg|_{0}^{\pi} + \frac{1}{2} \left[ \frac{1}{7} \sin(7x) + \frac{1}{3} \sin(3x) \right] \Bigg|_{0}^{\pi} + \frac{1}{2} \left[ \frac{1}{9} \sin(9x) + \sin(x) \right] \Bigg|_{0}^{\pi} \right) \\
-&= 0 \\
-\therefore f_4+f_5 &= 0.125
+C_n &= \frac{1}{T} \int_{0}^{T} \cos^4(x) e^{\frac{-jn2\pi t}{T}} \,dx \\
+    C_n &= \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} \cos^4(x) \cos(nx) \,dx + 0 \\
+   C_4 &= \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} (\cos x)^4 \cos(4x) \, dx \\
+&= \frac{2}{\pi} \left( \frac{3}{8} \int_{0}^{\frac{\pi}{2}} \cos(4x) \, dx + \frac{1}{2} \int_{0}^{\frac{\pi}{2}} \cos(2x) \cos(4x) \, dx + \frac{1}{8} \int_{0}^{\frac{\pi}[2]} \cos(4x)^2 \, dx \right) \\
+&= \frac{2}{\pi} \left( \frac{3}{8} \frac{1}{4} \sin(4x) \Bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{2} \left[\frac{1}{6} \sin(6x) + \frac{1}{2}\sin(2x) \right] \Bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{8} \frac{1}{2} \left[ x + \frac{1}{8} \sin(8x) \right] \Bigg|_{0}^{\frac{\pi}{2}}  \right) \\
+&=\frac{1}{16} \\
+    C_5 &= \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} (\cos x)^4 \cos(5x) \, dx \\
+&= \frac{2}{\pi} \left( \frac{3}{8} \int_{0}^{\frac{\pi}{2}} \cos(5x) \, dx + \frac{1}{2} \int_{0}^{\frac{\pi}{2}} \cos(2x) \cos(5x) \, dx + \frac{1}{8} \int_{0}^{\frac{\pi}{2}} \cos(4x) \cos(5x) \, dx \right) \\
+&= \frac{2}{\pi} \left(\frac{3}{8} \frac{1}{5} \sin(5x) \Bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{2} \left[ \frac{1}{7} \sin(7x) + \frac{1}{3} \sin(3x) \right] \Bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{2} \left[ \frac{1}{9} \sin(9x) + \sin(x) \right] \Bigg|_{0}^{\frac{\pi}{2}} \right) \\
+&= 0 
+\end{align}
+Since the function is even, 
+\begin{align}
+f_n &= 2C_n \\
+\therefore f_4 + f_5 &= 0.125
 \end{align}
 \begin{figure}[ht]
 	\centering
