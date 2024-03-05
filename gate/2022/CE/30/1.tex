@@ -129,7 +129,7 @@ Q: The Fourier cosine series of a function is given by: $f(x) = \sum_{n=0}^{\inf
 C_n &= \frac{1}{T} \int_{0}^{T} \cos^4(x) e^{\frac{-jn2\pi t}{T}} \,dx \\
     C_n &= \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} \cos^4(x) \cos(nx) \,dx + 0 \\
    C_4 &= \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} (\cos x)^4 \cos(4x) \, dx \\
-&= \frac{2}{\pi} \left( \frac{3}{8} \int_{0}^{\frac{\pi}{2}} \cos(4x) \, dx + \frac{1}{2} \int_{0}^{\frac{\pi}{2}} \cos(2x) \cos(4x) \, dx + \frac{1}{8} \int_{0}^{\frac{\pi}[2]} \cos(4x)^2 \, dx \right) \\
+&= \frac{2}{\pi} \left( \frac{3}{8} \int_{0}^{\frac{\pi}{2}} \cos(4x) \, dx + \frac{1}{2} \int_{0}^{\frac{\pi}{2}} \cos(2x) \cos(4x) \, dx + \frac{1}{8} \int_{0}^{\frac{\pi}{2}} \cos(4x)^2 \, dx \right) \\
 &= \frac{2}{\pi} \left( \frac{3}{8} \frac{1}{4} \sin(4x) \Bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{2} \left[\frac{1}{6} \sin(6x) + \frac{1}{2}\sin(2x) \right] \Bigg|_{0}^{\frac{\pi}{2}} + \frac{1}{8} \frac{1}{2} \left[ x + \frac{1}{8} \sin(8x) \right] \Bigg|_{0}^{\frac{\pi}{2}}  \right) \\
 &=\frac{1}{16} \\
     C_5 &= \frac{2}{\pi} \int_{0}^{\frac{\pi}{2}} (\cos x)^4 \cos(5x) \, dx \\
@@ -139,6 +139,7 @@ C_n &= \frac{1}{T} \int_{0}^{T} \cos^4(x) e^{\frac{-jn2\pi t}{T}} \,dx \\
 \end{align}
 Since the function is even, 
 \begin{align}
+\cos\brak{\omega t} &= \frac{1}{2}(e^{j\omega t}+e^{-j\omega t}) \\
 f_n &= 2C_n \\
 \therefore f_4 + f_5 &= 0.125
 \end{align}
